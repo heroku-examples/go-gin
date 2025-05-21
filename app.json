@@ -1,0 +1,6 @@
+{
+  "name": "Go-Gin Sample App",
+  "description": "A sample Go-Gin application for deploying on Heroku",
+  "repository": "https://github.com/heroku-examples/go-gin/",
+  "keywords": ["go", "gin", "heroku"]
+}
