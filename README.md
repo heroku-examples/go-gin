@@ -19,45 +19,46 @@ brew install go
 
 #### Create your workspace
 ```bash
-~/project$ go mod initi gihub.com/YOUR-USERNAME/YOUR-REPO-NAME
+go mod initi gihub.com/YOUR-USERNAME/YOUR-REPO-NAME
 ```
 
 #### Add the Gin Framework
 ```bash
-~/project$ go get github.com/gin-gonic/gin
+go get github.com/gin-gonic/gin
 ```
 
 #### Run the server
 ```bash
-~/project$ go run main.go
+go run main.go
 ```
 
 ### Create a Heroku App
 #### Login & Create app
 ```bash
-~/project$ heroku login
+heroku login
 
-~/project$ heroku apps:create my-go-gin-api
+heroku apps:create my-go-gin-api
 ```
 
 #### Show Git remotes
 ```bash
-~/project$ git remote show heroku
+git remote show heroku
 ```
 
 #### Tidy up your Go project
 ```bash
-~/project$ go mod tidy
+go mod tidy
 ```
 
 ### Deploying Your Application
+Assuming you're in the project directory, `git add .` works great. Otherwise you might need `git add -All`.
 ```bash
-~/project$ git add .
-~/project$ git commit -m "Prepare app for Heroku deployment"
-~/project$ git push heroku main 
+git add .
+git commit -m "Prepare app for Heroku deployment"
+git push heroku main 
 ```
 
 ### Test the live application
 ```bash
-~/project$ curl -s -X GET https://<<APP-URL>>/quote | jq
+curl -s -X GET https://<<APP-URL>>/quote | jq
 ```
